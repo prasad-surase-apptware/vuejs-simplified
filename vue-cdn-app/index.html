@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+
+  <body>
+    <h1>Learning Vue Js - Options API / CDN</h1>
+    <p>
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iusto, quaerat?
+    </p>
+
+    <div id="app">
+      <!-- vue js application -->
+      <h1>Vue JS App</h1>
+      {{printHello()}}
+      <h3>{{name}}</h3>
+    </div>
+
+    <script>
+      const app = Vue.createApp({
+        data() {
+          return {
+            name: "Prasad",
+          };
+        },
+
+        methods: {
+          printHello() {
+            alert("Hello " + this.name);
+          },
+        },
+      });
+
+      app.mount("#app");
+    </script>
+  </body>
+</html>
